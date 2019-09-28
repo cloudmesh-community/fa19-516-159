@@ -1,22 +1,24 @@
 # Creating a Data Pipeline between HDFS and AWS Redshift
 
-##Abstract
+Austin Zebrowski: fa19-516-159
+
+## Abstract
 
 I will use Apache Airflow to create a data pipeline from Hadoop Distributed File System
 (HDFS), to AWS S3, to Amazon Redshift. I will create a RESTful API that exposes data from the Redshift
 database.  
 
-##Introduction
+## Introduction
 
 TBD
 
-##Design
+## Design
 
 TBD
 
 * Architecture
 
-##Implementation
+## Implementation
 
 * Technologies Used
 
@@ -26,7 +28,7 @@ TBD
     4) AWS Redshift
     5) Connexion
 
-##Results
+## Results
 
 TBD
 
