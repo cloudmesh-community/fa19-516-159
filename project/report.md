@@ -31,6 +31,10 @@ TBD
 
 ## Progress
 
+Below you will find weekly report of the progress.
+
+This section to be completed in the following weeks.
+
 ## Work Breakdown
 
 All of this work is to be completed by Austin Zebrowski. This is not a group project.
