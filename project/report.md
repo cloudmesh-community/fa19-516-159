@@ -1,6 +1,7 @@
 # Creating a Data Pipeline between HDFS and AWS Redshift
 
-Austin Zebrowski: fa19-516-159
+Name: Austin Zebrowski
+HID: fa19-516-159
 
 ## Abstract
 
