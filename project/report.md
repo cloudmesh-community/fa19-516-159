@@ -28,6 +28,14 @@ TBD
     4) AWS Redshift
     5) Connexion
 
+## Progress
+
+## Work Breakdown
+
+All of this work is to be completed by Austin Zebrowski. This is not a group project.
+
+## References
+
 ## Results
 
 TBD
