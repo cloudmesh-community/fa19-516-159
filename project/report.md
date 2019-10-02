@@ -1,6 +1,7 @@
 # Creating a Data Pipeline between HDFS and AWS Redshift
 
-Austin Zebrowski: fa19-516-159
+Name: Austin Zebrowski  
+HID: fa19-516-159
 
 ## Abstract
 
@@ -27,6 +28,18 @@ TBD
     3) AWS S3
     4) AWS Redshift
     5) Connexion
+
+## Progress
+
+Below you will find weekly report of the progress.
+
+This section to be completed in the following weeks.
+
+## Work Breakdown
+
+All of this work is to be completed by Austin Zebrowski. This is not a group project.
+
+## References
 
 ## Results
 
