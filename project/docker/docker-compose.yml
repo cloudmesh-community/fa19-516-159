@@ -1,3 +1,6 @@
+# this docker compose file describes how the airflow image and postgres database cooperate
+# TODO: add volumes, to access files from local drive
+
 version: '3'
 services:
     postgres:
@@ -13,7 +16,7 @@ services:
             - postgres
         ports:
             - "8080:8080"
-        command: airflow webserver -p 8080
+        command: airflow webserver
         environment:
             - LOAD_EX=n
             - EXECUTOR=Local
