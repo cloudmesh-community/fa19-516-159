@@ -1,24 +1,22 @@
-# Creating a Data Pipeline between HDFS and AWS Redshift
+# AWS to Azure Data Pipeline: Using Cloudmesh within Airflow
 
 Austin Zebrowski, fa19-516-159 :o2:
 
+azebrows@iu.edu
+
 ## Abstract
 
-I will use Apache Airflow to create a data pipeline from Azure Blob containers to AWS S3. I will create a REST API that allows the user to use GET to get a list of the files on either of the clouds, and to use POST to move a file between clouds. 
-
-I will create a cloudmesh.airflow library that allows us to easily use Cloudmesh in the context of an Airflow DAG.
+Cloudmesh provides functionality to easiliy create virtual machines (VMs) in multiple clouds. Apache Airflow is an open-source data pipeline orchestration tool. By leveraging the strengths of each, files can be moved between clouds, and the files' status and history can be viewed through a user interface (UI). This can be achieved by creating a library of functions that use Cloudmesh commands in an Airflow environment.
 
 ## Introduction
 
-Cloudmesh is a great tool for using the resources of multiple clouds. One of Cloudmesh's features is cloudmesh-storage, which enables cloud-to-cloud data transfer. This meets a key need, but often want to do more than simply move the files. This is where Aiflow comes into play.
+Cloudmesh is a great tool for using the resources of multiple clouds. One of Cloudmesh's features is cloudmesh-storage, which enables cloud-to-cloud data transfer. This meets a key need, but often want to do more than simply move the files. This is where we can use Airflow - a python-based open source data pipelining project.
 
-With Airflow, we are able to set up directed acyclic graphs (DAGs) that define a sequence of tasks in a workflow. We can then view these DAGs in a UI that displays their definitions, histories, and execution logs. What kind of tasks can we perform in Airflow? Practically anything! Airflow is a open-source, python based cloud technology. We can leverage the full power of Python to perform any tasks required for our DAG.
+With Airflow, we can set up directed acyclic graphs (DAGs) that define a sequence of tasks in a workflow. We can then view these DAGs in a UI that displays their code definitions, histories, and execution logs. By creating a library of functions that use Cloudmesh within Airflow, we can easily schedule and visualize the startup of VMs on multiple clouds and a data transfer between them.
 
-We can combine the capabilities of Cloudmesh and Airflow to get the best of both worlds. Within an Airflow DAG, we can use Cloudmesh to start VMs on multiple clouds and move data between those clouds. 
+To make these capabilities more broadly accessible, we can create a RESTful API that exposes functionality such as starting VMs, listing files, and moving files.
 
-## Design
-
-TBD
+## Architecture
 
 
 ## Implementation
@@ -29,7 +27,8 @@ TBD
     2) Azure Blob
     3) AWS S3
     4) Cloudmesh
-    5) Connexion
+    5) Docker
+    6) Open API 3.0
 
 ## Progress
 
@@ -37,7 +36,18 @@ TBD
 
 Installed a fully operable instance of Cloudmesh. Previous Cloudmesh installation was not fully functional due to a problem in my environment. 
 
-Installed Airflow.
+10/20
+
+Created Amazon AWS account and added credential information into Cloudmesh. Attempted, unsuccessfully, to launch an AWS VM with Cloudmesh.
+
+10/21
+
+Created dockerfile and docker compose file to spin up a Docker container running Airflow.
+
+10/24
+
+Created architecture diagram.
+
 
 ## Work Breakdown
 
