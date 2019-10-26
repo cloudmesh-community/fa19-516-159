@@ -18,7 +18,7 @@ To make these capabilities more broadly accessible, we can create a RESTful API 
 
 ## Architecture
 
-![Architecture](images/architecture_image.png)
+![Architecture](https://github.com/cloudmesh-community/fa19-516-159/blob/master/project/images/architecture_image.PNG)
 
 ## Implementation
 
