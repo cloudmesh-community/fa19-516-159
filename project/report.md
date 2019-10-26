@@ -1,4 +1,4 @@
-# AWS to Azure Data Pipeline: Using Cloudmesh within Airflow
+# AWS to Azure Data Pipeline: Using Cloudmesh in Airflow
 
 Austin Zebrowski, fa19-516-159 :o2:
 
@@ -18,12 +18,13 @@ To make these capabilities more broadly accessible, we can create a RESTful API 
 
 ## Architecture
 
+![Architecture](images/architecture_image.png)
 
 ## Implementation
 
 * Technologies Used
 
-    1) Apache Airflow (open source, python-based data pipeline)
+    1) Apache Airflow
     2) Azure Blob
     3) AWS S3
     4) Cloudmesh
