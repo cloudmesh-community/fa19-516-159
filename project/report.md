@@ -39,11 +39,11 @@ Installed a fully operable instance of Cloudmesh. Previous Cloudmesh installatio
 
 10/20
 
-Created Amazon AWS account and added credential information into Cloudmesh. Attempted, unsuccessfully, to launch an AWS VM with Cloudmesh.
+Created Amazon AWS account. added "cloudmesh" user, and added access key information into cloudmesh.yaml. Attempted, unsuccessfully, to launch an AWS VM with Cloudmesh (can not refresh image list).
 
 10/21
 
-Created dockerfile and docker compose file to spin up a Docker container running Airflow.
+Created [dockerfile](/docker/Dockerfile) and [docker compose file](/docker/docker-compose.yaml) to spin up a Docker container running Airflow.
 
 10/24
 
