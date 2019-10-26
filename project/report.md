@@ -18,7 +18,7 @@ To make these capabilities more broadly accessible, we can create a RESTful API 
 
 ## Architecture
 
-![Architecture](https://github.com/cloudmesh-community/fa19-516-159/blob/master/project/images/architecture_image.PNG)
+![Architecture](/project/images/architecture_image.PNG)
 
 ## Implementation
 
@@ -43,7 +43,7 @@ Created Amazon AWS account. added "cloudmesh" user, and added access key informa
 
 10/21
 
-Created [dockerfile](/docker/Dockerfile) and [docker compose file](/docker/docker-compose.yaml) to spin up a Docker container running Airflow.
+Created [dockerfile](/project/docker/Dockerfile) and [docker compose file](/project/docker/docker-compose.yaml) to spin up a Docker container running Airflow.
 
 10/24
 
