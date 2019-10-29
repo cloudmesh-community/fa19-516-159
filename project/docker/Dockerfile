@@ -22,14 +22,6 @@ RUN export AIRFLOW_HOME=~/airflow
 
 RUN airflow initdb
 RUN mkdir ~/airflow/dags
-#RUN airflow scheduler
-#RUN airflow webserver -p 8080
-
-RUN pip install pip -I
-RUN pip install cloudmesh-installer
-RUN mkdir cm && cd cm
-RUN cloudmesh-installer git clone cloud
-RUN cloudmesh-installer install cloud -e
 
 # Expose ports
 
