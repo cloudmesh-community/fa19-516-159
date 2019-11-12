@@ -49,6 +49,19 @@ Created [dockerfile](/project/docker/Dockerfile) and [docker compose file](/proj
 
 Created architecture diagram.
 
+10/28
+
+Improvements to Docker Airflow setup:
+
+	1) Adding entrypoint script
+	2) Mounting local files to docker image
+	3) Creating test dag
+	4) Editing Airflow config file
+	5) File organization
+	
+11/4
+
+Cloudmesh installation on Docker - first attempt (needs more work)
 
 ## Work Breakdown
 

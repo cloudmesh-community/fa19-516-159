@@ -1,0 +1,7 @@
+# this docker compose file describes how the airflow image and postgres database cooperate
+# TODO: add volumes, to access files from local drive
+
+version: '3'
+services:
+    cloudmesh:
+        image: cm-test

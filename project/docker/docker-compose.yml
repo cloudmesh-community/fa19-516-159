@@ -1,22 +1,21 @@
-# this docker compose file describes how the airflow image and postgres database cooperate
-# TODO: add volumes, to access files from local drive
-
 version: '3'
 services:
-    postgres:
-        image: postgres:latest
-        environment:
-            - POSTGRES_USER=airflow
-            - POSTGRES_PASSWORD=airflow
-            - POSTGRES_DB=airflow
+        postgres:
+                image: postgres:latest
+                container_name: airflow_postgres
+                environment:
+                        - POSTGRES_USER=airflow
+                        - POSTGRES_PASSWORD=airflow
+                        - POSTGRES_DB=airflow
 
-    webserver:
-        image: airflowtest
-        depends_on:
-            - postgres
-        ports:
-            - "8080:8080"
-        command: airflow webserver
-        environment:
-            - LOAD_EX=n
-            - EXECUTOR=Local
+        webserver:
+                image: airflow:latest
+                container_name: airflow_webserver
+                restart: always
+                depends_on:
+                        - postgres
+                volumes:
+                        - //c/users/azebrowski/testme/dags:/usr/local/airflow/dags
+                ports:
+                        - "8080:8080"
+                entrypoint: /entrypoint.sh
