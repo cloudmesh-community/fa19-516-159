@@ -63,6 +63,14 @@ Improvements to Docker Airflow setup:
 
 Cloudmesh installation on Docker - first attempt (needs more work)
 
+11/11
+
+No progress
+
+11/18
+
+Use docker postgres db to hold airflow metadata. Include pgadmin client in docker compose for ad hoc airflow data queries.
+
 ## Work Breakdown
 
 All of this work is to be completed by Austin Zebrowski. This is not a group project.
