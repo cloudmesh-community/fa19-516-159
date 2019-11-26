@@ -8,6 +8,17 @@ services:
                         - POSTGRES_PASSWORD=airflow
                         - POSTGRES_DB=airflow
 
+        pgadmin:
+                image: dpage/pgadmin4:latest
+                container_name: airflow_pgadmin
+                depends_on:
+                        - postgres
+                ports:
+                        - "80:80"
+                environment:
+                        - PGADMIN_DEFAULT_EMAIL=postgres
+                        - PGADMIN_DEFAULT_PASSWORD=admin
+
         webserver:
                 image: airflow:latest
                 container_name: airflow_webserver
