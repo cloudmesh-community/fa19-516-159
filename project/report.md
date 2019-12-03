@@ -71,6 +71,10 @@ No progress
 
 Use docker postgres db to hold airflow metadata. Include pgadmin client in docker compose for ad hoc airflow data queries.
 
+11/25
+
+Get both cloudmesh and airflow running in the same docker image
+
 ## Work Breakdown
 
 All of this work is to be completed by Austin Zebrowski. This is not a group project.
