@@ -1,5 +1,23 @@
 version: '3'
 services:
+        cloudmesh:
+            build: .
+            container_name: cloudmesh
+            volumes:
+                - .:/code
+                - ~/.cloudmesh:/root/.cloudmesh
+                - ~/.ssh/id_rsa.pub:/root/.ssh/id_rsa.pub
+                - //c/users/austin/testme:/usr/local/airflow/dags
+            depends_on:
+                - mongo
+                - postgres
+            links:
+                - mongo
+            restart: always
+            ports:
+                    - "8080:8080"
+            entrypoint: /entrypoint.sh
+
         postgres:
                 image: postgres:latest
                 container_name: airflow_postgres
@@ -18,15 +36,14 @@ services:
                 environment:
                         - PGADMIN_DEFAULT_EMAIL=postgres
                         - PGADMIN_DEFAULT_PASSWORD=admin
-
-        webserver:
-                image: airflow:latest
-                container_name: airflow_webserver
+                
+        mongo:
+                image: mongo:latest
+                container_name: mongodb
                 restart: always
-                depends_on:
-                        - postgres
-                volumes:
-                        - //c/users/azebrowski/testme/dags:/usr/local/airflow/dags
-                ports:
-                        - "8080:8080"
-                entrypoint: /entrypoint.sh
+                environment:
+                    MONGO_INITDB_ROOT_USERNAME: azebrows
+                    MONGO_INITDB_ROOT_PASSWORD: *****
+                    MONGO_INITDB_DATABASE: cloudmesh
+                    ports: "27017-27019:27017-27019"
+                    volumes: ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
