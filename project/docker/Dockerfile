@@ -1,23 +1,30 @@
 FROM ubuntu:19.04
 
-RUN set -x \
-        && apt-get -y update \
-        && apt-get -y upgrade \
-        && apt-get -y --no-install-recommends install build-essential \
-                                                      git \
-                                                      curl \
-                                                      wget \
-                                                      sudo \
-        && apt-get -y install python3 \
-                              python3-pip \
-        && rm -rf /var/lib/apt/lists/* \
-        && update-alternatives --install /usr/bin/python python /usr/bin/python3 1 \
-        && update-alternatives --install /usr/bin/pip pip /usr/bin/pip3 1 \
-        && pip install cloudmesh-installer
+MAINTAINER Gregor von Laszewski <laszewski@gmail.com>
+
+RUN apt-get -y update
+RUN apt-get -y upgrade
+RUN apt-get -y --no-install-recommends install build-essential
+RUN apt-get -y --no-install-recommends install git
+RUN apt-get -y --no-install-recommends install curl
+RUN apt-get -y --no-install-recommends install wget
+RUN apt-get -y --no-install-recommends install sudo
+RUN apt-get -y install python3
+RUN apt-get -y install python3-pip
+
+RUN ln -s /usr/bin/python3 /usr/bin/python
+RUN ln -s /usr/bin/pip3 /usr/bin/pip
+
+RUN apt-get -y --no-install-recommends install mongodb
+
+
+RUN pip install cloudmesh-installer
 
 RUN mkdir cm
 WORKDIR cm
 
+RUN ls
+RUN echo
 RUN cloudmesh-installer git clone cloud
 RUN cloudmesh-installer install cloud -e
 
@@ -31,3 +38,5 @@ COPY /config/airflow.cfg /usr/local/airflow/airflow.cfg
 COPY /script/entrypoint.sh /entrypoint.sh
 
 RUN dos2unix /entrypoint.sh
+
+RUN pip install -U pytest
