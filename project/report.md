@@ -51,6 +51,9 @@ moving files.
 
 ## Progress
 
+:o2: please remve progress report as no longer useful. Integrate finding
+into the report. Maybe we a feature section and refernce section
+
 10/18
 
 Installed a fully operable instance of Cloudmesh. Previous Cloudmesh
@@ -93,7 +96,8 @@ No progress
 
 11/18
 
-Use docker postgres db to hold airflow metadata. Include pgadmin client in docker compose for ad hoc airflow data queries.
+Use docker postgres db to hold airflow metadata. Include pgadmin client
+in docker compose for ad hoc airflow data queries.
 
 11/25
 
