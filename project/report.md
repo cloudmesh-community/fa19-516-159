@@ -48,33 +48,10 @@ moving files.
     4) Cloudmesh
     5) Docker
 
-## Progress
 
-10/18
-
-Installed a fully operable instance of Cloudmesh. Previous Cloudmesh
-installation was not fully functional due to a problem in my
-environment.
-
-10/20
-
-Created Amazon AWS account. added "cloudmesh" user, and added access key
-information into cloudmesh.yaml. Attempted, unsuccessfully, to launch an
-AWS VM with Cloudmesh (can not refresh image list).
-
-10/21
-
-Created [dockerfile](/project/Dockerfile) and [docker compose
-file](/project/docker-compose.yaml) to spin up a Docker container
-running Airflow.
-
-10/24
 
 ## References
 
 ## Results
 
-TBD
 
-* Deployment Benchmarks
-* Application Benchmarks
