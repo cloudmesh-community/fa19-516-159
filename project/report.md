@@ -111,6 +111,8 @@ where the existing VMs cannot be deleted, and new VMs cannot be created.
 
 ## Implementation Manual
 
+These implementation steps assume that you have Docker and Docker Compose installed, ssh keys, and that you have cloned this repository
+
 * Technologies Used
 
     1) Apache Airflow
@@ -118,4 +120,79 @@ where the existing VMs cannot be deleted, and new VMs cannot be created.
     3) AWS EC2
     4) Cloudmesh
     5) Docker
+
+#### Configure Amazon AWS:
+1. [Login to AWS Account](https://aws.amazon.com)
+2. [Go to Identity and Access Management](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html)
+	- Create 'cloudmesh' group
+	- Create 'cloudmesh' user
+	- Create New Access Key for user 'cloudmesh'
+	- Place the Access Key ID and Secret Access Key ID in cloudmesh.yaml file
+	- Place the .pem file in the ~/.cloudmesh directory
+	- Specify the .pem file name in the cloudmesh.yaml file
+3. [Configure the EC2 Security Groups](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-security-groups.html#creating-security-group)
+	- Add an inbound custom TCP Rule with open port 22. Open this port to your PC, for SSH
+
+	
+#### Configure Azure:
+1. [Login to Azure Account](https://portal.azure.com)
+2. Copy your Subscription ID to a notepad
+3. Go to the Registrations page, and register a 'cloudmesh' application
+	- Copy your application's client and tenant IDs to a notepad
+4. Go to the Certificates and Secrets page, and create a new Client Secret
+	- Copy the Client Secret to a notepad
+5. Go to Access Control and add cloudmesh as a contributor
+6. Add the credentials from your notepad into the cloudmesh.yaml file
+	
+
+#### Local Directory Config:
+
+This filed must NOT be copied into your image
+
+1. Create a configuration file for your AWS Secrets, to enable SSH
+	- mkdir aws
+	- touch credentials
+ (contents)
+	[cloudmesh]
+	aws_access_key_id=*****
+	aws_secret_access_key=*******
+2. Create a configuration file for your passcodes
+	- touch pass.txt
+	- specify password for scp
+ 
+#### Modify DAGs:
+
+1. Modify the files in the DAGs directory to use your ssh key
+	
+
+#### Cloudmesh.yaml Config:
+
+1. Ensure that you have configured your AWS and Azure accounts (refer to those sections)
+2. Fill out the MongoDB data section, specifying your mongo username and password
+3. Replace the mongo path and mongo log paths, in favor of a directory that is not specified as a volume in docker-compose.yml file
+
+	
+#### Startup:
+
+1. Build the docker image
+ - docker build -t cloudmesh/cloudmesh-cms .
+2. Modify volume paths in docker-compose.yml to point to your local directory
+3. Run your images 
+ - docker compose up -d
+4. When finished, stop and remove containers
+ - docker-compose down
+ 
+#### Airflow UI
+
+While containers are running...
+1. Access the Airflow UI
+ - localhost:8080
+2. Turn the DAG schedulers to "on"
+3. Trigger the DAGs
+		
+#### Run Pytests:
+
+* pytest -q test_airflow.py
+* pytest -q test_airflow.py
+
 
