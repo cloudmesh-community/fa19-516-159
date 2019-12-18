@@ -98,19 +98,18 @@ process to use Azure's CLI within Airflow DAGs. In these cases, Cloudmesh can be
 
 ## Opportunities for Improvement
 
-Building Cloudmesh on Docker, and interfacing with AWS, Azure, and Chameleon reveals a few areas for improvement. Most significantly, it is possible to 
+* Building Cloudmesh on Docker, and interfacing with AWS, Azure, and Chameleon reveals a few areas for improvement. Most significantly, it is possible to 
 create multiple VMs with the same name. This happens when a user creates multiple VMs from the same container. It is not possible to delete these VMs in 
 Cloudmesh, since they have the same name. It is possible, in AWS and Azure, to delete these VMs from the cloud's GUI. In Chameleon cloud this cause problems,
 where the existing VMs cannot be deleted, and new VMs cannot be created. 
 
-In the cloudmesh.yaml file, the MongoDB download locations must be changed to specify a location that is not mounted as a volume to a Docker container. 
+* In the cloudmesh.yaml file, the MongoDB download locations must be changed to specify a location that is not mounted as a volume to a Docker container. 
 
-The Cloudmesh function "vm ip show" is not working in Azure or AWS. However, it does not provide a "Not implemented" response. 
+* The Cloudmesh function "vm ip show" is not working in Azure or AWS. However, it does not provide a "Not implemented" response. 
 
-Stopping and removing docker containers that are running cloudmesh results in a situation where Cloudmesh is not aware of any local VMs. This causes errors when 
-trying to list VMs, for example. 
+* Stopping and removing docker containers that are running cloudmesh results in a situation where Cloudmesh is not aware of any local VMs. This causes errors when trying to list VMs, for example. 
 
-## Implementation
+## Implementation Manual
 
 * Technologies Used
 
