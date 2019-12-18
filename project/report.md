@@ -194,3 +194,16 @@ While containers are running...
 
 * pytest -q test_airflow.py
 * pytest -q test_airflow.py
+
+## References
+
+[AWS Quickstart](https://cloudmesh.github.io/client/aws.html?highlight=aws)
+[Airflow Validation Tests](https://blog.usejournal.com/testing-in-airflow-part-1-dag-validation-tests-dag-definition-tests-and-unit-tests-2aa94970570c)
+[Azure Quickstart](https://github.com/cloudmesh/cloudmesh-manual/blob/master/docs-source/source/accounts/azure.md)
+[Airflow Overview](https://airflow.apache.org/)
+[Workflow Management](https://otonomo.io/luigi-airflow-pinball-and-chronos-comparing-workflow-management-systems/)
+[Airflow Internals](https://www.astronomer.io/)
+[Airflow Architecture](https://medium.com/@dustinstansbury/understanding-apache-airflows-key-concepts-a96efed52b1a)
+
+
+
