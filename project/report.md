@@ -82,7 +82,7 @@ The logs are stored as a Python dictionary.
 
 The nuances of Airflow's architecture and capabilities are not discussed here. 
 
-![Architecture](/project/images/airflow_architecture.PNG)
+![Airflow_Architecture](/project/images/airflow_architecture.png)
 
 ## Results
 
