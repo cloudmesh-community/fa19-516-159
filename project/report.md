@@ -1,6 +1,6 @@
 # AWS to Azure Data Pipeline: Using Cloudmesh in Airflow
 
-Austin Zebrowski, fa19-516-159 :o2:
+Austin Zebrowski, fa19-516-159
 
 azebrows@iu.edu
 
@@ -43,16 +43,12 @@ moving files.
 * Technologies Used
 
     1) Apache Airflow
-    2) Azure Blob
-    3) AWS S3
+    2) Azure VM
+    3) AWS EC2
     4) Cloudmesh
     5) Docker
-    6) Open API 3.0
 
 ## Progress
-
-:o2: please remve progress report as no longer useful. Integrate finding
-into the report. Maybe we a feature section and refernce section
 
 10/18
 
@@ -68,40 +64,11 @@ AWS VM with Cloudmesh (can not refresh image list).
 
 10/21
 
-Created [dockerfile](/project/docker/Dockerfile) and [docker compose
-file](/project/docker/docker-compose.yaml) to spin up a Docker container
+Created [dockerfile](/project/Dockerfile) and [docker compose
+file](/project/docker-compose.yaml) to spin up a Docker container
 running Airflow.
 
 10/24
-
-Created architecture diagram.
-
-10/28
-
-Improvements to Docker Airflow setup:
-
-	1) Adding entrypoint script
-	2) Mounting local files to docker image
-	3) Creating test dag
-	4) Editing Airflow config file
-	5) File organization
-	
-11/4
-
-Cloudmesh installation on Docker - first attempt (needs more work)
-
-11/11
-
-No progress
-
-11/18
-
-Use docker postgres db to hold airflow metadata. Include pgadmin client
-in docker compose for ad hoc airflow data queries.
-
-11/25
-
-Get both cloudmesh and airflow running in the same docker image
 
 ## References
 
