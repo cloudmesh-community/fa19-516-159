@@ -24,8 +24,6 @@ on multiple clouds and subsequent interactions with these clouds.
 
 ## Cloudmesh Airflow Architecture
 
-:o2: image missing
-
 ![Architecture](/project/images/architecture_image.PNG)
 
 
