@@ -29,8 +29,6 @@ on multiple clouds and subsequent interactions with these clouds.
 ![Architecture](/project/images/architecture_image.PNG)
 
 
-## Cloudmesh Integration
-
 ### Motivation 
 
 Cloudmesh enables users to easily work in a variety of cloud environments. With this, there can be some difficulty to keep environments neatly managed.
@@ -83,6 +81,8 @@ This includes actions that happen in the Web UI, task executions, and processes 
 The logs are stored as a Python dictionary.
 
 The nuances of Airflow's architecture and capabilities are not discussed here. 
+
+![Architecture](/project/images/airflow_architecture.PNG)
 
 ## Results
 
