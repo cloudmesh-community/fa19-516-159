@@ -1,4 +1,4 @@
-# AWS to Azure Data Pipeline: Using Cloudmesh in Airflow
+# Using Cloudmesh in Airflow - Azure and AWS
 
 Austin Zebrowski, fa19-516-159
 
@@ -194,5 +194,3 @@ While containers are running...
 
 * pytest -q test_airflow.py
 * pytest -q test_airflow.py
-
-
