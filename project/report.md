@@ -24,7 +24,7 @@ on multiple clouds and subsequent interactions with these clouds.
 
 ## Cloudmesh Airflow Architecture
 
-![Architecture](/project/images/architecture_image.PNG)
+![Architecture](images/architecture_image.PNG)
 
 
 ### Motivation 
@@ -80,7 +80,7 @@ The logs are stored as a Python dictionary.
 
 The nuances of Airflow's architecture and capabilities are not discussed here. 
 
-![Airflow_Architecture](/project/images/airflow_architecture.png)
+![Airflow_Architecture](images/airflow_architecture.png)
 
 ## Results
 
